@@ -5,7 +5,7 @@ import { projects } from '../data';
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-16 bg-white">
+    <section id="projects" className="py-12 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Featured Projects</h2>
@@ -22,7 +22,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group"
+              className="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full group"
             >
               <div className="relative h-48 overflow-hidden bg-slate-100">
                 <img
@@ -49,19 +49,19 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-3 mt-auto">
+                <div className="flex flex-nowrap gap-3 mt-auto">
                   <a
                     href={project.liveDemo}
-                    className="flex-1 inline-flex justify-center items-center gap-1.5 px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors"
+                    className="flex-1 inline-flex justify-center items-center gap-1.5 px-3 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors whitespace-nowrap"
                   >
-                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                    <ArrowTopRightOnSquareIcon className="w-4 h-4 shrink-0" />
                     Live Demo
                   </a>
                   <a
                     href={project.github}
-                    className="flex-1 inline-flex justify-center items-center gap-1.5 px-4 py-2 bg-slate-100 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-200 transition-colors"
+                    className="flex-1 inline-flex justify-center items-center gap-1.5 px-3 py-2 bg-slate-100 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-200 transition-colors whitespace-nowrap"
                   >
-                    <CodeBracketIcon className="w-4 h-4" />
+                    <CodeBracketIcon className="w-4 h-4 shrink-0" />
                     Code
                   </a>
                 </div>
