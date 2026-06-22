@@ -1,12 +1,20 @@
-export const skills = [
-  "React",
-  "Tailwind CSS",
-  "JavaScript",
-  "HTML5",
-  "CSS3",
-  "Vite",
-  "Node.js",
-  "Git",
+export const skillsCategories = [
+  {
+    title: "Frontend",
+    skills: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+  },
+  {
+    title: "Programming",
+    skills: ["Python", "Problem Solving"],
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "GitHub", "VS Code"],
+  },
+  {
+    title: "Currently Learning",
+    skills: ["React", "AI Integration", "Modern Web Development"],
+  },
 ];
 
 export const projects = [
