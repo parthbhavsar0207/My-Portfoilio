@@ -14,7 +14,11 @@ const About = () => {
         >
           <h2 className="text-3xl font-bold text-slate-900 mb-6">About Me</h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            I am a first-year Computer Science and Engineering student. I have a strong interest in learning web development and creating beautiful, responsive websites. I enjoy taking ideas and turning them into real, working applications. Constantly exploring new technologies, my current focus is on mastering React and modern CSS frameworks like Tailwind.
+            Hello! I'm Parth, a first-year Computer Science and Engineering student with a strong interest in web development and artificial intelligence.
+
+I enjoy building websites, experimenting with new technologies, and turning ideas into working projects. My current focus is strengthening my development skills, creating portfolio-worthy projects, and preparing for internships and freelance opportunities.
+
+When I'm not coding, you'll usually find me exploring new technologies, working on personal projects, or learning something that helps me grow as a developer.
           </p>
         </motion.div>
       </div>
