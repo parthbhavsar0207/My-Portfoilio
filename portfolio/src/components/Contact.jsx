@@ -1,8 +1,21 @@
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { EnvelopeIcon, LinkIcon } from '@heroicons/react/24/outline';
 
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('parthb100922@gmail.com');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy email', err);
+    }
+  };
+
   return (
     <section id="contact" className="py-12 bg-slate-50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
