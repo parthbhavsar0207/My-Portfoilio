@@ -32,24 +32,18 @@ const Contact = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-            <div className="relative w-full sm:w-auto flex justify-center">
-              <button
-                onClick={handleCopyEmail}
-                className="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-md transition-all w-full sm:w-auto justify-center cursor-pointer"
-              >
-                <EnvelopeIcon className="w-5 h-5" />
-                <span className="font-medium">{copied ? 'Copied!' : 'Copy Email'}</span>
-              </button>
-              {copied && (
-                <div className="absolute -top-10 bg-gray-800 text-white text-xs px-3 py-1 rounded shadow-lg whitespace-nowrap">
-                  Email copied to clipboard!
-                  <div className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                </div>
-              )}
-            </div>
+            <a
+              href="mailto:parthb100922@gmail.com"
+              className="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-md transition-all w-full sm:w-auto justify-center"
+            >
+              <EnvelopeIcon className="w-5 h-5" />
+              <span className="font-medium">Email Me</span>
+            </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/parth-bhavsar-088822325/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-md transition-all w-full sm:w-auto justify-center"
             >
               <LinkIcon className="w-5 h-5" />
@@ -57,7 +51,9 @@ const Contact = () => {
             </a>
 
             <a
-              href="#"
+              href="https://github.com/parthbhavsar0207" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-md transition-all w-full sm:w-auto justify-center"
             >
               <LinkIcon className="w-5 h-5" />
