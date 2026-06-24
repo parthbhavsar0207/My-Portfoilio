@@ -12,10 +12,8 @@ const Hero = () => {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-4">
           Hi, I'm <span className="text-indigo-600">Parth</span>.
         </h1>
-        <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-          CSE Student • Web Developer • Building Real-World Projects
-          <br />
-          I'm a first-year Computer Science student passionate about web development, AI, and building practical projects. Currently focused on creating modern websites and improving my development skills through real-world projects.
+        <p className="text-lg sm:text-xl text-slate-600 max-w-xl mx-auto mb-8">
+          A first-year CSE student passionate about building clean, modern, and user-friendly web applications.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
