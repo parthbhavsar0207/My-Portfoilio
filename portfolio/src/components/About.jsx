@@ -10,9 +10,12 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start"
         >
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">About Me</h2>
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900">About Me</h2>
+            <div className="w-12 h-1 bg-blue-600 mt-4"></div>
+          </div>
           <p className="text-lg text-slate-600 leading-relaxed">
             I am a first-year Computer Science and Engineering student. I have a strong interest in learning web development and creating beautiful, responsive websites. I enjoy taking ideas and turning them into real, working applications. Constantly exploring new technologies, my current focus is on mastering React and modern CSS frameworks like Tailwind.
           </p>
