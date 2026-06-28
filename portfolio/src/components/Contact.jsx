@@ -28,18 +28,24 @@ const Contact = () => {
         >
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Let's Connect</h2>
           <p className="text-lg text-slate-600 mb-8">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            Interested in collaborating, building projects, or discussing opportunities? Let's connect.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-            <a
+            {/* <a
               href="mailto:parthb100922@gmail.com"
               className="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-md transition-all w-full sm:w-auto justify-center"
             >
               <EnvelopeIcon className="w-5 h-5" />
               <span className="font-medium">Email Me</span>
-            </a>
-
+            </a> */}
+            <button
+  onClick={handleCopyEmail}
+  className="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-lg text-slate-700 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-md transition-all w-full sm:w-auto justify-center"
+>
+  <EnvelopeIcon className="w-5 h-5" />
+  <span className="font-medium">{copied ? 'Copied!' : 'Copy Email'}</span>
+</button>
             <a
               href="https://www.linkedin.com/in/parth-bhavsar-088822325/"
               target="_blank"

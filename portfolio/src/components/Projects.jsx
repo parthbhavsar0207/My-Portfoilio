@@ -8,9 +8,9 @@ const Projects = () => {
     <section id="projects" className="py-12 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Currently Building</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Project Roadmap</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Real projects will be added as they are completed.
+            These are the projects I'm currently working on and planning to build. Each project will be published here with a detailed description, tech stack, and links to the live demo and source code. Stay tuned for updates!
           </p>
         </div>
 

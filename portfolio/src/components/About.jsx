@@ -17,11 +17,7 @@ const About = () => {
             <div className="w-12 h-1 bg-blue-600 mt-4"></div>
           </div>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Hello! I'm Parth, a first-year Computer Science and Engineering student with a strong interest in web development and artificial intelligence.
-
-I enjoy building websites, experimenting with new technologies, and turning ideas into working projects. My current focus is strengthening my development skills, creating portfolio-worthy projects, and preparing for internships and freelance opportunities.
-
-When I'm not coding, you'll usually find me exploring new technologies, working on personal projects, or learning something that helps me grow as a developer.
+           I am a first-year Computer Science student with a strong interest in web development and AI. I enjoy building clean, practical websites and learning by shipping real projects rather than just watching tutorials. Right now, I am focused on strengthening my frontend skills, exploring modern tools, and turning ideas into useful digital experiences.
           </p>
         </motion.div>
       </div>
