@@ -58,6 +58,8 @@ const Projects = () => {
                   <div className="flex flex-nowrap gap-3 mt-auto pt-4 border-t border-slate-100">
                     <a
                       href={project.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap"
                     >
                       <ArrowTopRightOnSquareIcon className="w-4 h-4 shrink-0" />
@@ -65,8 +67,10 @@ const Projects = () => {
                     </a>
                     <a
                       href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap"
-                    >
+                   >
                       <CodeBracketIcon className="w-4 h-4 shrink-0" />
                       Code
                     </a>

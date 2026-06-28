@@ -25,8 +25,8 @@ export const projects = [
       "My first personal portfolio built with React and Tailwind CSS to showcase my skills, design style, and learning journey as a first-year CSE student.",
     status: "Completed",
     techStack: ["React", "Tailwind CSS", "Vite"],
-    liveDemo: "https://your-live-portfolio-link.vercel.app",
-    github: "https://github.com/your-username/portfolio-repo",
+    liveDemo: "https://my-portfoilio-pyrikqyjc-parth-s-lab.vercel.app/",
+    github: "https://github.com/parthbhavsar0207/My-Portfoilio",
   },
   {
     id: 2,
