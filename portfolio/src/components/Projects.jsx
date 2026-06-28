@@ -8,13 +8,13 @@ const Projects = () => {
     <section id="projects" className="py-12 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Featured Projects</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Currently Building</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Some of the projects I've built while learning web development.
+            Real projects will be added as they are completed.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -22,19 +22,24 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full group"
+              className="bg-white rounded-xl border border-slate-200/60 p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full"
             >
-              <div className="relative h-48 overflow-hidden bg-slate-100">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{project.title}</h3>
-                <p className="text-slate-600 mb-4 flex-grow text-sm leading-relaxed">
+              <div className="flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-slate-900">{project.title}</h3>
+                  <span
+                    className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                      project.status === 'Completed'
+                        ? 'bg-green-50 text-green-700 border border-green-200'
+                        : project.status === 'In Progress'
+                        ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                        : 'bg-slate-50 text-slate-600 border border-slate-200'
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+                </div>
+                <p className="text-slate-600 mb-6 flex-grow text-sm leading-relaxed">
                   {project.description}
                 </p>
 
@@ -42,29 +47,31 @@ const Projects = () => {
                   {project.techStack.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-2.5 py-1 bg-indigo-50 text-indigo-600 text-xs font-medium rounded-md"
+                      className="px-2 py-1 bg-slate-50 text-slate-500 border border-slate-100 text-xs font-medium rounded-md"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex flex-nowrap gap-3 mt-auto">
-                  <a
-                    href={project.liveDemo}
-                    className="flex-1 inline-flex justify-center items-center gap-1.5 px-3 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors whitespace-nowrap"
-                  >
-                    <ArrowTopRightOnSquareIcon className="w-4 h-4 shrink-0" />
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.github}
-                    className="flex-1 inline-flex justify-center items-center gap-1.5 px-3 py-2 bg-slate-100 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-200 transition-colors whitespace-nowrap"
-                  >
-                    <CodeBracketIcon className="w-4 h-4 shrink-0" />
-                    Code
-                  </a>
-                </div>
+                {project.status === 'Completed' && (
+                  <div className="flex flex-nowrap gap-3 mt-auto pt-4 border-t border-slate-100">
+                    <a
+                      href={project.liveDemo}
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap"
+                    >
+                      <ArrowTopRightOnSquareIcon className="w-4 h-4 shrink-0" />
+                      Live Demo
+                    </a>
+                    <a
+                      href={project.github}
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap"
+                    >
+                      <CodeBracketIcon className="w-4 h-4 shrink-0" />
+                      Code
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
